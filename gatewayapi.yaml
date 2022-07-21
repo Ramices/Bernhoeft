@@ -1,0 +1,22 @@
+---
+swagger: '2.0'
+info:
+  title: Bernhoeft API Gateway
+  description: Bernhoeft API Gateway
+  version: 1.0.0
+schemes:
+  - https
+produces:
+  - application/json
+paths:
+  /getuser:
+    get:
+      summary: Get a user by id
+      operationId: get
+      x-google-backend:
+        address: https://us-central1-projeto-bernhoeft.cloudfunctions.net/pegarmarcas
+      responses:
+        '200':
+          description: A successful response
+          schema:
+            type: string
